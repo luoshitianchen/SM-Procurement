@@ -1,0 +1,16 @@
+[project]
+name = "SM-Procurement"
+version = "2.0.0"
+description = "采购管理系统：供应商、询价、采购订单、收货与付款"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 200
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
