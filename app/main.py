@@ -12,7 +12,7 @@ from pydantic import BaseModel, Field
 from app import base
 
 SERVICE = "sm-procurement"
-VERSION = "2.0.0"
+VERSION = "3.0.0"
 NAME = "SM Procurement"
 DESCRIPTION = "采购管理系统：供应商、采购订单、明细行与收货"
 PORT = 8530
