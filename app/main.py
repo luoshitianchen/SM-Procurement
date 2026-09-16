@@ -11,7 +11,7 @@ from app.core.config import settings
 from app.core.database import init_db
 from app.core.logging import setup_logging
 from app.core.middleware import SecurityMiddleware
-from app.routers import crypto, health, items, meta, metrics
+from app.routers import crypto, health, items, meta, metrics, proc_orders, proc_requisitions, proc_suppliers
 
 setup_logging()
 
@@ -42,7 +42,9 @@ app.include_router(meta.router)
 app.include_router(crypto.router)
 app.include_router(items.router)
 app.include_router(metrics.router)
-
+app.include_router(proc_suppliers.router)
+app.include_router(proc_requisitions.router)
+app.include_router(proc_orders.router)
 
 
 @app.get("/", include_in_schema=False)
